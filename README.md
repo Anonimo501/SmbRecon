@@ -14,16 +14,19 @@ el cual nos mostrara los shares de SMB y usuarios enumerados.
 
 
 
+## Instalacion
+
+git clone https://github.com/Anonimo501/SmbRecon.git
+
+cd SmbRecon/
+
+chmod +x smb
+
+./smb
+
 ## Uso
 
-git clone https://github.com/Anonimo501/SambaRelay_V2.git
-
-cd SambaRelay_V2/
-
-chmod +x SMB_Relay_v2.sh
-
-./SMB_Relay.sh
-
+./smb 192.168.43.10
 
 # Referencias
 
