@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo "                                                                                          "
+echo "			            ██████  ███▄ ▄███▓ ▄▄▄▄              "
+echo "			          ▒██    ▒ ▓██▒▀█▀ ██▒▓█████▄            "
+echo "			          ░ ▓██▄   ▓██    ▓██░▒██▒ ▄██           "
+echo "			            ▒   ██▒▒██    ▒██ ▒██░█▀             "
+echo "			          ▒██████▒▒▒██▒   ░██▒░▓█  ▀█▓           "
+echo "			          ▒ ▒▓▒ ▒ ░░ ▒░   ░  ░░▒▓███▀▒           "
+echo "			          ░ ░▒  ░ ░░  ░      ░▒░▒   ░            "
+echo "			          ░  ░  ░  ░      ░    ░    ░            "
+echo "			                ░         ░    ░                 "
+echo "			                                    ░            "
+echo "                                                                                                     "
+echo "                                                                                                     "
+echo "                                  [Created By Victor Garcia]                                         "
+echo "	    [https://youtube.com/c/Anonimo501 - https://www.youtube.com/c/takito1812/featured]             "
+echo "                                                                                                     "
+echo "  												   "
+
+# Colours
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+
+if [ -z $1 ]
+then
+    echo -e "${redColour}[*] Syntax: IP address${endColour}"
+    exit 1
+fi
+
+echo -e "${redColour}[*] Smbmap${endColour}"
+
+smbmap -H $1 -R
+
+echo -e "${redColour}[*] Smbclient${endColour}"
+
+smbclient -N -L //$1
+
+echo -e "${redColour}[*] Nmap NSE Script${endColour}"
+
+nmap --script=smb-enum-shares.nse,smb-enum-users.nse -p445 -T4 $1
