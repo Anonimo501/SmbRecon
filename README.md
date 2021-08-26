@@ -9,6 +9,11 @@ Grupo en Telegram https://t.me/Pen7esting
 Es un sencillo escript escrito por Victor Garcia el cual usa Smbmap, Smbclient y Nmap NSE Script, 
 el cual nos mostrara los shares de SMB y usuarios enumerados.
 
+
+![Captura](https://user-images.githubusercontent.com/67207446/131047358-82c34e81-5fcb-49f5-a0e5-1f3c7d9f4929.PNG)
+
+
+
 ## Uso
 
 git clone https://github.com/Anonimo501/SambaRelay_V2.git
