@@ -26,6 +26,8 @@ chmod +x smb
 
 ## Uso
 
+Ejemplo:
+
 ./smb 192.168.43.10
 
 # Referencias
